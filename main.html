@@ -1,27 +1,65 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-	<table>
-		<thead><tr><th>Element</th> <th>ID</th> <th>Type</th> <th>Attributes</th> <th>Label Required</th></tr></thead>
 
-		<tbody>
-		<tr><td>Name</td> <td>name</td> <td>Text</td> <td>minlength="3",maxlength="50",required</td><td>Yes</td></tr>
-		<tr><td>Portfolio</td> <td>portfolio</td> <td>URL</td> <td>required</td><td>Yes</td></tr>
-		<tr><td>Favorite</td> <td>favColor</td> <td>Color</td> <td>N/A</td><td>Yes</td></tr>
-		<tr><td>Likeness</td> <td>likeness</td> <td>Range</td> <td>min="1",max="100"</td><td>Yes</td></tr>
-	</tbody>
-	</table>
-	
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+<form action="#" method="post">
+    <h2>Feedback Form</h2>
+
+    <!-- Name Input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" minlength="3" maxlength="50" required>
+
+    <!-- Portfolio Input -->
+    <label for="portfolio">Portfolio:</label>
+    <input type="url" id="portfolio" name="portfolio" required>
+
+    <!-- Favorite Color Input -->
+    <label for="favColor">Favorite Color:</label>
+    <input type="color" id="favColor" name="favColor" required>
+
+    <!-- Likeness Input -->
+    <label for="likeness">Likeness:</label>
+    <input type="range" id="likeness" name="likeness" min="1" max="100" required>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+</form>
 
 </body>
-
 </html>
